@@ -1,0 +1,69 @@
+.skillPage{
+
+    .skills{
+
+        .skills_container{
+            row-gap: 0;
+
+            .skills_content{
+                
+                .skills_header{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: var(--mb-2-5);
+                    cursor: pointer;
+
+                    .skills_icon{
+                        margin-right: var(--mb-0-75);
+                    }
+
+                    .skills_arrow{
+
+                    }
+
+                    .skills_arrow,.skills_icon{
+                        font-size: 2rem;
+                        color: var(--first-color);
+                    }
+
+                    .skills_title{
+                        font-size: var(--h3-font-size);
+                    }
+
+                    .skills_subtitle{
+                        font-size: var(--small-font-size);
+                        color: var(--text-color-light);
+                    }
+
+                    .skills_arrow{
+
+                    }
+                }
+
+                .skills_list{
+
+                    .skills_data{
+
+                        .skills_title{
+
+                            .skills_name{
+
+                            }
+
+                            .skills_number{
+
+                            }
+                        }
+
+                        .skills_bar{
+
+                            .skills_percentage{
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
