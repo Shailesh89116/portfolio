@@ -18,7 +18,8 @@
                     }
 
                     .skills_arrow{
-
+                        margin-left: auto;
+                        transition: .4s;
                     }
 
                     .skills_arrow,.skills_icon{
@@ -35,18 +36,23 @@
                         color: var(--text-color-light);
                     }
 
-                    .skills_arrow{
-
-                    }
+                    
                 }
 
                 .skills_list{
+                    row-gap: 1.5rem;
+                    padding-left: 2.7rem;
 
                     .skills_data{
 
-                        .skills_title{
+                        .skills_titles{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: var(--mb-0-5);
 
                             .skills_name{
+                                font-size: var(--normal-font-size);
+                                font-weight: var(--font-medium);
 
                             }
 
@@ -56,13 +62,65 @@
                         }
 
                         .skills_bar{
+                            background-color: var(--first-color-lighter);
 
                             .skills_percentage{
-
+                                display: block;
+                                background-color: var(--first-color);
                             }
+
+                            .skills_html{
+                                width: 90%;
+                            }
+                            .skills_javascript{
+                                width: 80%;
+                            }
+                            .skills_reactjs{
+                                width: 90%;
+                            }
+                            .skills_redux{
+                                width: 70%;
+                            }
+                            .skills_nodejs{
+                                width: 70%;
+                            }
+                            .skills_expressjs{
+                                width: 80%;
+                            }
+                            .skills_mongodb{
+                                width: 90%;
+                            }
+                            .skills_aws{
+                                width: 70%;
+                            }
+                            .skills_docker{
+                                width: 80%;
+                            }
+                            .skills_kubernetes{
+                                width: 90%;
+                            }
+                        }
+
+                        .skills_bar,.skills_percentage{
+                            height: 5px;
+                            border-radius: .25rem;
                         }
                     }
                 }
+            }
+
+            .skills_close .skills_list{
+                height: 0;
+                overflow: hidden;
+            }
+
+            .skills_open .skills_list{
+                height: max-content;
+                margin-bottom: var(--mb-2-5);
+            }
+
+            .skills_open .skills_arrow{
+                transform: rotate(-180deg);
             }
         }
     }

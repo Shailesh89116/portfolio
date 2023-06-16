@@ -1,7 +1,24 @@
+import { useState } from "react";
 import "./skills.scss"
 import { UilBracketsCurly, UilAngleDown, UilServerNetwork, UilCloudDatabaseTree } from '@iconscout/react-unicons'
 
 const Skills = () => {
+
+    const [toggleState, setToggleState] = useState({
+        skill1: false,
+        skill2: false,
+        skill3: false,
+      });
+
+      const toggleSkills = (skill) => {
+        setToggleState((prevState) => ({
+            skill1: skill === 'skill1' ? !prevState.skill1 : false,
+            skill2: skill === 'skill2' ? !prevState.skill2 : false,
+            skill3: skill === 'skill3' ? !prevState.skill3 : false,
+            skill4: skill === 'skill4' ? !prevState.skill4 : false
+          }));
+      };
+
   return (
     <div className="skillPage">
       <div className="skills section" id="skills">
@@ -11,7 +28,7 @@ const Skills = () => {
         <div className="skills_container container grid">
             <div>
                 {/* ====================Skill-1================ */}
-                <div className="skills_content">
+                <div className={`skills_content ${toggleState.skill1 ? 'skills_open' : 'skills_close'}`} >
                     <div className="skills_header">
                     <UilBracketsCurly className="skills_icon"/>
 
@@ -22,11 +39,11 @@ const Skills = () => {
                         <span className="skills_subtitle">More than 1 year</span>
                     </div>
                     
-                    <UilAngleDown className="skills_arrow"/>
+                    <UilAngleDown className="skills_arrow" onClick={() => toggleSkills('skill1')}/>
                     </div>
                     <div className="skills_list grid">
                         <div className="skills_data">
-                            <div className="skills_title">
+                            <div className="skills_titles">
                                 <h3 className="skills_name">HTML/CSS</h3>
                                 <span className="skills_number">90%</span>
                             </div>
@@ -36,7 +53,7 @@ const Skills = () => {
                         </div>
 
                         <div className="skills_data">
-                            <div className="skills_title">
+                            <div className="skills_titles">
                                 <h3 className="skills_name">Javascript</h3>
                                 <span className="skills_number">80%</span>
                             </div>
@@ -46,7 +63,7 @@ const Skills = () => {
                         </div>
 
                         <div className="skills_data">
-                            <div className="skills_title">
+                            <div className="skills_titles">
                                 <h3 className="skills_name">ReactJs</h3>
                                 <span className="skills_number">90%</span>
                             </div>
@@ -56,7 +73,7 @@ const Skills = () => {
                         </div>
 
                         <div className="skills_data">
-                            <div className="skills_title">
+                            <div className="skills_titles">
                                 <h3 className="skills_name">Redux</h3>
                                 <span className="skills_number">70%</span>
                             </div>
@@ -69,7 +86,7 @@ const Skills = () => {
                 </div>
 
                 {/* ====================Skill-2================ */}
-                <div className="skills_content">
+                <div className={`skills_content ${toggleState.skill2 ? 'skills_open' : 'skills_close'}`}>
                     <div className="skills_header">
                     <UilServerNetwork className="skills_icon"/>
 
@@ -80,11 +97,11 @@ const Skills = () => {
                         <span className="skills_subtitle">More than 1 year</span>
                     </div>
                     
-                    <UilAngleDown className="skills_arrow"/>
+                    <UilAngleDown className="skills_arrow" onClick={() => toggleSkills('skill2')}/>
                     </div>
                     <div className="skills_list grid">
                         <div className="skills_data">
-                            <div className="skills_title">
+                            <div className="skills_titles">
                                 <h3 className="skills_name">NodeJS</h3>
                                 <span className="skills_number">70%</span>
                             </div>
@@ -94,7 +111,7 @@ const Skills = () => {
                         </div>
 
                         <div className="skills_data">
-                            <div className="skills_title">
+                            <div className="skills_titles">
                                 <h3 className="skills_name">ExpressJs</h3>
                                 <span className="skills_number">80%</span>
                             </div>
@@ -104,7 +121,7 @@ const Skills = () => {
                         </div>
 
                         <div className="skills_data">
-                            <div className="skills_title">
+                            <div className="skills_titles">
                                 <h3 className="skills_name">MongoDB</h3>
                                 <span className="skills_number">90%</span>
                             </div>
@@ -117,7 +134,7 @@ const Skills = () => {
                 </div>
 
                 {/* ====================Skill-3================ */}
-                <div className="skills_content">
+                <div className={`skills_content ${toggleState.skill3 ? 'skills_open' : 'skills_close'}`}>
                     <div className="skills_header">
                     <UilCloudDatabaseTree className="skills_icon"/>
 
@@ -128,11 +145,11 @@ const Skills = () => {
                         <span className="skills_subtitle">More than 6 months</span>
                     </div>
                     
-                    <UilAngleDown className="skills_arrow"/>
+                    <UilAngleDown className="skills_arrow" onClick={() => toggleSkills('skill3')}/>
                     </div>
                     <div className="skills_list grid">
                         <div className="skills_data">
-                            <div className="skills_title">
+                            <div className="skills_titles">
                                 <h3 className="skills_name">AWS</h3>
                                 <span className="skills_number">70%</span>
                             </div>
@@ -142,7 +159,7 @@ const Skills = () => {
                         </div>
 
                         <div className="skills_data">
-                            <div className="skills_title">
+                            <div className="skills_titles">
                                 <h3 className="skills_name">Docker</h3>
                                 <span className="skills_number">80%</span>
                             </div>
@@ -152,7 +169,7 @@ const Skills = () => {
                         </div>
 
                         <div className="skills_data">
-                            <div className="skills_title">
+                            <div className="skills_titles">
                                 <h3 className="skills_name">Kubernetes</h3>
                                 <span className="skills_number">90%</span>
                             </div>
