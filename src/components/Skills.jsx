@@ -29,7 +29,7 @@ const Skills = () => {
             <div>
                 {/* ====================Skill-1================ */}
                 <div className={`skills_content ${toggleState.skill1 ? 'skills_open' : 'skills_close'}`} >
-                    <div className="skills_header">
+                    <div className="skills_header" onClick={() => toggleSkills('skill1')}>
                     <UilBracketsCurly className="skills_icon"/>
 
                     <div className="">
@@ -39,7 +39,7 @@ const Skills = () => {
                         <span className="skills_subtitle">More than 1 year</span>
                     </div>
                     
-                    <UilAngleDown className="skills_arrow" onClick={() => toggleSkills('skill1')}/>
+                    <UilAngleDown className="skills_arrow" />
                     </div>
                     <div className="skills_list grid">
                         <div className="skills_data">
@@ -87,7 +87,7 @@ const Skills = () => {
 
                 {/* ====================Skill-2================ */}
                 <div className={`skills_content ${toggleState.skill2 ? 'skills_open' : 'skills_close'}`}>
-                    <div className="skills_header">
+                    <div className="skills_header" onClick={() => toggleSkills('skill2')}>
                     <UilServerNetwork className="skills_icon"/>
 
                     <div className="">
@@ -97,7 +97,7 @@ const Skills = () => {
                         <span className="skills_subtitle">More than 1 year</span>
                     </div>
                     
-                    <UilAngleDown className="skills_arrow" onClick={() => toggleSkills('skill2')}/>
+                    <UilAngleDown className="skills_arrow" />
                     </div>
                     <div className="skills_list grid">
                         <div className="skills_data">
@@ -135,7 +135,7 @@ const Skills = () => {
 
                 {/* ====================Skill-3================ */}
                 <div className={`skills_content ${toggleState.skill3 ? 'skills_open' : 'skills_close'}`}>
-                    <div className="skills_header">
+                    <div className="skills_header" onClick={() => toggleSkills('skill3')}>
                     <UilCloudDatabaseTree className="skills_icon"/>
 
                     <div className="">
@@ -145,7 +145,7 @@ const Skills = () => {
                         <span className="skills_subtitle">More than 6 months</span>
                     </div>
                     
-                    <UilAngleDown className="skills_arrow" onClick={() => toggleSkills('skill3')}/>
+                    <UilAngleDown className="skills_arrow" />
                     </div>
                     <div className="skills_list grid">
                         <div className="skills_data">

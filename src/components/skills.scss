@@ -11,6 +11,7 @@
                     display: flex;
                     align-items: center;
                     margin-bottom: var(--mb-2-5);
+                    
                     cursor: pointer;
 
                     .skills_icon{
@@ -112,6 +113,7 @@
             .skills_close .skills_list{
                 height: 0;
                 overflow: hidden;
+    
             }
 
             .skills_open .skills_list{
@@ -121,6 +123,11 @@
 
             .skills_open .skills_arrow{
                 transform: rotate(-180deg);
+            }
+
+            .skills_open{
+              
+            
             }
         }
     }
